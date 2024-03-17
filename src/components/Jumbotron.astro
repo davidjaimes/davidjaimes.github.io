@@ -1,5 +1,6 @@
 ---
-import DavidImageChange from "./DavidImageChange.astro";
+import { Image } from 'astro:assets';
+import face3 from '../assets/face3.png';
 ---
 <section>
 	<div class="jumbotron">
@@ -7,16 +8,13 @@ import DavidImageChange from "./DavidImageChange.astro";
 			<h1>David Jaimes</h1>
 			<p>Financial Analyst in San Diego</p>
 		</div>
-		<DavidImageChange/>
+		<Image id="propic" src={face3} alt="" class="mx-auto rounded-full w-48 h-48 laptop:w-72 laptop:h-72"/>
 	</div>
 </section>
 
 <style>
 	section {@apply bg-white dark:bg-gray max-w-screen-laptop mx-auto}
-	.jumbotron {@apply
-		grid grid-cols-1 gap-4 items-center
-		laptop:grid-cols-2
-	}
-	h1 {@apply mobile:pt-8 text-gray-dark dark:text-white font-mono text-4xl text-center}
+	.jumbotron {@apply grid grid-cols-1 gap-4 items-center laptop:grid-cols-2}
+	h1 {@apply pt-4 laptop:pt-0 text-gray-dark dark:text-white font-mono text-4xl text-center}
 	p {@apply p-4 text-gray-dark dark:text-white font-mono text-center}
 </style>
