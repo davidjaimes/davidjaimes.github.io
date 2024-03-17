@@ -17,16 +17,7 @@ import Footer from "../components/Footer.astro";
 	</head>
 	<body class="bg-white dark:bg-gray">
 		<Nav/>
-		<Jumbotron/>
 		<slot/>
-		<div class="post-content">
-			<IndexMarkdown/>
-		</div>
 		<Footer/>
 	</body>
 </html>
-
-<style>
-	.post-content {@apply max-w-4xl mx-auto pt-8 laptop:pt-12 font-mono text-gray-dark dark:text-white px-4}
-	:global(.post-content h2) {@apply pt-8 pb-4 text-2xl }
-</style>
