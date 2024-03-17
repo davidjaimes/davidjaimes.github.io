@@ -1,0 +1,30 @@
+---
+import '@fontsource/ibm-plex-mono';
+
+import Nav from "../components/Nav.astro";
+import Jumbotron from "../components/Jumbotron.astro";
+import {Content as IndexMarkdown} from "../components/Index.md";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width"/>
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="The personal website of David Jaimes." />
+		<title>David Jaimes</title>
+	</head>
+	<body class="bg-white dark:bg-gray">
+		<Nav/>
+		<Jumbotron/>
+		<slot/>
+		<div class="post-content">
+			<IndexMarkdown/>
+		</div>
+	</body>
+</html>
+
+<style>
+	.post-content {@apply max-w-4xl mx-auto mt-12 font-mono text-gray-dark dark:text-white px-4}
+	:global(.post-content h2) {@apply pt-8 pb-4 text-2xl }
+</style>

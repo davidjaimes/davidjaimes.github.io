@@ -1,0 +1,27 @@
+---
+import DavidIcon from "./DavidIcon.astro";
+import ToggleTheme from "./ToggleTheme.astro";
+---
+<nav>
+	<div class="max-w-4xl mx-auto px-4 md:px-6 sm:px-4 xs:px-6 lg:px-0 xl:px-0 sticky">
+        <div class="flex justify-between">
+            <div class="flex space-x-4">
+                <!-- logo -->
+                <div>
+                    <a href="/" class="flex items-center py-3 text-gray-dark dark:text-white">
+                        <DavidIcon/>
+                        <span class="font-mono text-lg">davidjaimes.com</span>
+                    </a>
+                </div>
+            </div>
+            <!-- secondary nav -->
+	            <div class="mobile:flex flex items-center space-x-1">
+	            	<ToggleTheme/>
+	            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+	nav {@apply sticky top-0 bg-white dark:bg-gray backdrop-filter backdrop-blur-lg bg-opacity-70}
+</style>
