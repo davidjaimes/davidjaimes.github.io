@@ -5,7 +5,7 @@ import expressiveCode from "astro-expressive-code";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://davidjaimes.com',
+  site: 'https://davidjaimes.com/',
   integrations: [
     expressiveCode({
       themes: ['github-dark-dimmed'],
