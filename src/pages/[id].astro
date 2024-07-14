@@ -4,7 +4,7 @@ const { id } = Astro.params;
 const page = await getPage(id);
 
 if (!page) {
-  const error = await fetch(`${Astro.url}/404`)
+  const error = await fetch(`${Astro.url.origin}/404`)
   return new Response(error.body, {
     headers: error.headers,
     status: 404,
