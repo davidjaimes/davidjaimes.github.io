@@ -1,7 +1,11 @@
 ---
 import LayoutBase from "../layouts/LayoutBase.astro";
 import {Content as Markdown404} from "../components/404.md";
+interface Props {error: unknown};
+const { error } = Astro.props;
 ---
+<div>{error instanceof Error ? error.message : 'Unknown error'}</div>
+
 <LayoutBase>
 	<section>
 		<h2>404 Error</h2>
