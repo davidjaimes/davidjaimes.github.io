@@ -1,7 +1,16 @@
 ---
-import { status } from '../lib/status.ts'
 const { id } = Astro.params;
+
 const page = await getPage(id);
-if (!page) return status(404, `${Astro.url}/404`)
+
+if (!page) {
+  const error = await fetch(`${Astro.url}/404`)
+  return new Response(error.body, {
+    headers: error.headers,
+    status: 404,
+    statusText: 'Not Found'
+  })
+}
 ---
+
 {page}
