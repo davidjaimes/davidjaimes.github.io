@@ -1,9 +1,7 @@
 ---
+import { status } from '../lib/status.ts'
 const { id } = Astro.params;
-
 const page = await getPage(id);
-
-if (!page) return Astro.redirect('/404')
+if (!page) return status(404, `${Astro.url}/404`)
 ---
-
 {page}
