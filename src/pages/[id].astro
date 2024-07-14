@@ -1,8 +1,0 @@
----
-const pages = [{id: undefined}, {id: "404"}];
-const { id } = Astro.params;
-const page = pages.find((page) => page.id === id);
-if (!page) return Astro.redirect("/404");
----
-
-{page}
