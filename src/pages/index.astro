@@ -1,6 +1,14 @@
 ---
-import LayoutIndex from "../layouts/LayoutIndex.astro";
+import LayoutBase from "../layouts/LayoutBase.astro";
 ---
-<div>
-	<LayoutIndex/>
-</div>
+<LayoutBase>
+	<Jumbotron/>
+	<div class="post-content">
+		<IndexMarkdown/>
+	</div>
+<LayoutBase/>
+
+<style>
+	.post-content {@apply max-w-4xl mx-auto pt-8 laptop:pt-12 font-mono text-gray-dark dark:text-white px-4}
+	.post-content h2 {@apply pt-8 pb-4 text-2xl }
+</style>
