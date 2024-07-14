@@ -1,7 +1,6 @@
 ---
 import '@fontsource/ibm-plex-mono';
 import Nav from "../components/Nav.astro";
-import {Content as IndexMarkdown} from "../components/Index.md";
 import Footer from "../components/Footer.astro";
 ---
 <html lang="en">
@@ -13,8 +12,12 @@ import Footer from "../components/Footer.astro";
 		<title>David Jaimes</title>
 	</head>
 	<body class="bg-white dark:bg-gray">
+		
 		<Nav/>
-		<slot>
+
+		<slot/>
+		
 		<Footer/>
+		
 	</body>
 </html>
