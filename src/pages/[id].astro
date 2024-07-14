@@ -1,0 +1,9 @@
+---
+const { id } = Astro.params;
+
+const page = await getPage(id);
+
+if (!page) return Astro.redirect('/404')
+---
+
+{page}
