@@ -1,11 +1,6 @@
 ---
 import LayoutBase from "../layouts/LayoutBase.astro";
 import {Content as Markdown404} from "../components/404.md";
-const { id } = Astro.params;
-
-const page = await getPage(id);
-
-if (!page) return Astro.redirect('/404')
 ---
 <LayoutBase>
 	<section>
