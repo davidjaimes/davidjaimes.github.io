@@ -3,7 +3,7 @@ import LayoutBase from "../layouts/LayoutBase.astro";
 import Jumbotron from "../components/Jumbotron.astro";
 import {Content as IndexMarkdown} from "../components/Index.md";
 ---
-<LayoutBase>
+<LayoutBase slot="body">
 	<Jumbotron/>
 	<div class="post-content">
 		<IndexMarkdown/>
