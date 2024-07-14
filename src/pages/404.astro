@@ -1,6 +1,8 @@
 ---
 import LayoutBase from "../layouts/LayoutBase.astro";
 import {Content as Markdown404} from "../components/404.md";
+const Component = Map[data.page?.type];
+if (!Component) {return Astro.redirect("/404")};
 ---
 <LayoutBase>
 	<section>
