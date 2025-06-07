@@ -1,20 +1,39 @@
 ---
-import { Image } from 'astro:assets';
-import face3 from '../assets/face3.png';
+import { Image } from "astro:assets";
+import face3 from "../assets/face3.png";
+import { Font } from "astro:assets";
 ---
+
+<Font cssVariable="--font-inter" preload />
 <section>
-	<div class="jumbotron">
-		<div>
-			<h1>David Jaimes</h1>
-			<p>Finance Analyst in San Diego</p>
-		</div>
-		<Image id="propic" src={face3} alt="" class="mx-auto rounded-full w-48 h-48 laptop:w-72 laptop:h-72"/>
-	</div>
+    <div class="jumbotron">
+        <div>
+            <h1>David Jaimes</h1>
+            <p>Finance Analyst in San Diego</p>
+        </div>
+        <Image
+            id="propic"
+            src={face3}
+            alt=""
+            class="mx-auto rounded-full w-48 h-48 laptop:w-72 laptop:h-72"
+        />
+    </div>
 </section>
 
 <style>
-	section {@apply bg-white dark:bg-gray max-w-screen-laptop mx-auto}
-	.jumbotron {@apply grid grid-cols-1 gap-4 items-center laptop:grid-cols-2}
-	h1 {@apply pt-4 laptop:pt-0 text-gray-dark dark:text-white font-mono text-4xl text-center}
-	p {@apply p-4 text-gray-dark dark:text-white font-mono text-center}
+    body {
+        font-family: var(--font-inter);
+    }
+    section {
+        @apply bg-white dark:bg-gray max-w-screen-laptop mx-auto;
+    }
+    .jumbotron {
+        @apply grid grid-cols-1 gap-4 items-center laptop:grid-cols-2;
+    }
+    h1 {
+        @apply pt-4 laptop:pt-0 text-gray-dark dark:text-white text-4xl text-center;
+    }
+    p {
+        @apply p-4 text-gray-dark dark:text-white text-center;
+    }
 </style>
