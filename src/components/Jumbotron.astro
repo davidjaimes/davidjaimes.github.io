@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import face3 from "../assets/face3.png";
+---
+
+<section class="bg-white max-w-screen-laptop mx-auto">
+    <div class="grid grid-cols-1 gap-4 items-center laptop:grid-cols-2">
+        <div>
+            <h1 class="pt-4 laptop:pt-0 text-gray-dark text-4xl text-center">
+                David Jaimes
+            </h1>
+            <p class="p-4 text-gray-dark text-center">
+                Finance Analyst in San Diego
+            </p>
+        </div>
+        <Image
+            id="propic"
+            src={face3}
+            alt=""
+            class="mx-auto rounded-full w-48 h-48 laptop:w-72 laptop:h-72"
+        />
+    </div>
+</section>
